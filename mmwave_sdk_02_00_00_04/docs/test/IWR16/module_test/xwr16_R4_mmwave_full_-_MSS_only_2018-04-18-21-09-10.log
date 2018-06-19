@@ -1,0 +1,148 @@
+mss in binary >>> xwr16xx_mmwave_full_mss.xer4f
+eth008 Board details:
+IP address: 10.218.113.62
+Port: 17494
+
+connecting...
+Relay states 8->1 : 00010001
+1 off
+2 off
+Relay states 8->1 : 00010000
+1 on
+Relay states 8->1 : 00010001
+3 on
+Relay states 8->1 : 00010101
+3 off
+Relay states 8->1 : 00010001
+exit
+Disconnected
+Pre-Script returned: Success
+**************************************************
+Testcase mods & parameters invoked:
+**************************************************
+Two core test case: None (this is not a two core testcase)
+
+**************************************************
+Copying test case files from the Build server
+**************************************************
+amk: remote testcase data path: http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/control/mmwave/test/xwr16xx/testdata
+
+
+Testdata directory was not found on build server for this testcase
+
+Call to copy_testcase_binary:
+TCP: http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/control/mmwave/test/xwr16xx/full; /home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___iwr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56
+
+Copying testcase binary file from http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/control/mmwave/test/xwr16xx/full/xwr16xx_mmwave_full_mss.xer4f to /home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___iwr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56 using command: 
+wget -e robots=off --no-proxy -N -T 30 -t 2 -P /home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___iwr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56 http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/control/mmwave/test/xwr16xx/full/xwr16xx_mmwave_full_mss.xer4f
+**************************************************
+Executing Testcase:/home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___iwr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56/xwr16xx_mmwave_full_mss.xer4f
+**************************************************
+Checking if Py4J Gateway server has started...
+Py4J Gateway Server is Started
+amk: a path in cpuList is Texas Instruments XDS110 USB Debug Probe_1/DEBUGSSM_0
+amk: a path in cpuList is Texas Instruments XDS110 USB Debug Probe_1/IcePick_M_0
+amk: a path in cpuList is Texas Instruments XDS110 USB Debug Probe_1/C674X_0
+amk: a path in cpuList is Texas Instruments XDS110 USB Debug Probe_1/CS_DAP_0
+amk: a path in cpuList is Texas Instruments XDS110 USB Debug Probe_1/CortexR4_0
+DSS test case opening debug session.
+
+cr4ctl = 0xadad00
+
+efuse/register @0xFFFFE210 = 0x300002
+
+efuse/register @0xFFFFE214 = 0x30005b0
+
+efuse/register @0xFFFFE218 = 0x12
+
+efuse/register @0xFFFFE21C = 0x300
+
+Loading binary to the DUT:/home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___iwr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56/xwr16xx_mmwave_full_mss.xer4f
+
+**************************************************
+ Parameters found in the Binary arguments : 
+{'gTestSelection(32)': '1'}
+**************************************************
+Reading address of symbol: gTestSelection
+Address of symbol obtained: 0x800da3c
+Write value 1 to address 0x800da3c 
+Value updated successfully
+binary path = /home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___iwr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56/xwr16xx_mmwave_full_mss.xer4f
+
+
+**************************************************
+CIO Log captured for the testcase
+**************************************************
+*************************************************
+Enter the test to execute:
+1. [Isolation Mode]   MSS executes the mmWave link: Chirp Configuration Mode
+2. [Isolation Mode]   DSS executes the mmWave link: Chirp Configuration Mode
+3. [Cooperative Mode] MSS executes the mmWave link: Chirp Configuration Mode
+4. [Cooperative Mode] DSS executes the mmWave link: Chirp Configuration Mode
+5. Full Configuration API Testing only
+6. [Cooperative Mode] MSS executes mmWave link: Advanced Frame Configuration Mode
+7. [Cooperative Mode] DSS executes mmWave link: Advanced Frame Configuration Mode
+*************************************************
+Enter your choice: Feature: MMWave MSS [Isolation Mode] Initialization: Passed
+Feature: MMWave MSS Synchronization: Passed
+Feature: MMWave Add Profile: Passed
+Feature: MMWave Get Number Profile: Passed
+Feature: MMWave Get Profile Handle: Passed
+Feature: MMWave Get Profile: Passed
+Feature: MMWave Add Chirp: Passed
+Feature: MMWave Get Number of Chirps: Passed
+Feature: MMWave Get Chirp Handle: Passed
+Feature: MMWave Get Chirp Configuration: Passed
+Feature: MMWave Add BPM cfg: Passed
+Feature: MMWave Get Number of BPM cfg: Passed
+Feature: MMWave Get BPM Chirp Handle: Passed
+Feature: MMWave Get BPM Chirp Configuration: Passed
+Debug: BSS Event MsgId: 128 [Sub Block Id: 4100 Sub Block Length: 20]
+Feature: MMWave MSS Open: Passed
+Feature: MMWave MSS Configuration: Passed
+Debug: BSS Event MsgId: 128 [Sub Block Id: 4114 Sub Block Length: 20]
+Feature: MMWave MSS Start: Passed
+Debug: BSS Event MsgId: 128 [Sub Block Id: 4107 Sub Block Length: 0]
+Feature: MMWave MSS Stop: Passed
+Feature: MMWave MSS Close: Passed
+Feature: MMWave MSS Deinitialized: Passed
+Debug: mmWave Unit Tests completed successfully
+Value read from Global variable (MCPI_Result): 0
+Test Failure Signature: 0
+Test Log Messages: 
+Feature tested: MMWave MSS [Isolation Mode] Initialization: Passed
+Feature tested: MMWave MSS Synchronization: Passed
+Feature tested: MMWave Add Profile: Passed
+Feature tested: MMWave Get Number Profile: Passed
+Feature tested: MMWave Get Profile Handle: Passed
+Feature tested: MMWave Get Profile: Passed
+Feature tested: MMWave Add Chirp: Passed
+Feature tested: MMWave Get Number of Chirps: Passed
+Feature tested: MMWave Get Chirp Handle: Passed
+Feature tested: MMWave Get Chirp Configuration: Passed
+Feature tested: MMWave Add BPM cfg: Passed
+Feature tested: MMWave Get Number of BPM cfg: Passed
+Feature tested: MMWave Get BPM Chirp Handle: Passed
+Feature tested: MMWave Get BPM Chirp Configuration: Passed
+Feature tested: MMWave MSS Open: Passed
+Feature tested: MMWave MSS Configuration: Passed
+Feature tested: MMWave MSS Start: Passed
+Feature tested: MMWave MSS Stop: Passed
+Feature tested: MMWave MSS Close: Passed
+Feature tested: MMWave MSS Deinitialized: Passed
+
+
+shutting down py4j gw server.
+
+
+**************************************************
+Terminating the debug session and Shutting down gateway.
+**************************************************
+
+**************************************************
+Test case execution completed
+**************************************************
+
+**************************************************
+Testcase Result : PASS
+**************************************************

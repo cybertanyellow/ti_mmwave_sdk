@@ -1,0 +1,338 @@
+benchfile = /home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/config/bench_MCPI_TEE2@uda0227080_hs-awr16.py
+
+eth008 Board details:
+IP address: 10.218.113.59
+Port: 17494
+
+connecting...
+Relay states 8->1 : 00010001
+1 off
+2 off
+Relay states 8->1 : 00010000
+2 on
+Relay states 8->1 : 00010010
+1 on
+Relay states 8->1 : 00010011
+3 on
+Relay states 8->1 : 00010111
+3 off
+Relay states 8->1 : 00010011
+exit
+Disconnected
+Pre-Script returned: Success
+**************************************************
+Delete old BIN files
+**************************************************
+cmd: rm *.bin
+
+BIN delete cmd ret_value = 1
+rm: cannot remove ‘*.bin’: No such file or directory
+**************************************************
+Copying test case files from the Build server
+**************************************************
+call to copy_testcase_files:
+From: http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/demo/xwr16xx/mmw 
+to: /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk
+
+Copying testcase binary file from http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/demo/xwr16xx/mmw/xwr16xx_mmw_demo_secure.bin to /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk using command: 
+wget -e robots=off --no-proxy -N -T 30 -t 2 -P /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/demo/xwr16xx/mmw/xwr16xx_mmw_demo_secure.bin
+**************************************************
+Executing Testcase:/home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___hs_awr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56/xwr16xx_mmw_demo_secure.bin
+**************************************************
+
+Calling Uniflash tool to flash the DUT
+
+
+Current working directory is /home/a0216598/uniflash_linux_64/ccs_base/DebugServer/bin
+
+Binary is xwr16xx_mmw_demo_secure.bin
+
+cmd: ./DSLite serial -s COMPort=/dev/awr16xx_cfg -c /home/a0216598/uniflash_linux_64/user_files/configs/iwr1642.ccxml -l /home/a0216598/uniflash_linux_64/user_files/settings/generated.ufsettings -n 1 -e -f /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk/xwr16xx_mmw_demo_secure.bin,1
+DSLite in cmd.
+
+
+uniflash cmd ret_value = 0
+DSLite version 7.2.0.2096
+Configuring Debugger (may take a few minutes on first launch)...
+	Initializing Register Database...
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS470R25X_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS470RDX_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS470RXX_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS470R4X_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS320C6XXX_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS3CXX_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS320C64XX_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS320C674X_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/ICEPick_D_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/CS_DAP_0_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/CS_DAP_PC_0_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/ICEPick_M_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/TMS320C66XX_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/drivers/TI_reg_ids/ICEPick_C_regids.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/64x+NotVisible.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/c6000RegisterPairs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/TPTC.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/TPCC.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_RTIA.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_RTIB.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_ESM.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/xwr16xx/MSS_MCRC.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MAILBOX.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/cs_dap_NotVisible.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/AP/CFGAP.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/AP/PWRAP.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/AP/SECAP.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_user_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_fiq_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_svc_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_abt_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_irq_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_und_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/cpus/arm_allbanked_mode_regs.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/cortexR4_NotVisible.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_GIO.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_DMA_REG.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_VIM.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_QSPI.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_MIBSPIA.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_MIBSPIB.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_SCIA.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_SCIB.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_I2C.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_DCCA.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/radar/MSS_DCCB.xml
+	Parsing /home/a0216598/uniflash_linux_64/ccs_base/common/targetdb/Modules/etb_hidden_registers.xml
+	Initializing: DEBUGSSM_0
+	Mapping registers: DEBUGSSM_0 - Core Registers
+	Building search data: DEBUGSSM_0
+	Executing Startup Scripts: DEBUGSSM_0
+	Initializing: IcePick_M_0
+	Mapping registers: IcePick_M_0 - Core Registers
+	Building search data: IcePick_M_0
+	Executing Startup Scripts: IcePick_M_0
+	Initializing: C674X_0
+	Mapping registers: C674X_0 - Core Registers
+	Mapping registers: C674X_0 - RegisterPairs
+	Mapping registers: C674X_0 - TPTC0
+	Mapping registers: C674X_0 - TPTC1
+	Mapping registers: C674X_0 - TPTC2
+	Mapping registers: C674X_0 - TPTC3
+	Mapping registers: C674X_0 - TPCC0
+	Mapping registers: C674X_0 - TPCC1
+	Mapping registers: C674X_0 - RTIA
+	Mapping registers: C674X_0 - RTIB
+	Mapping registers: C674X_0 - ESM
+	Mapping registers: C674X_0 - CRC
+	Mapping registers: C674X_0 - MBX_DSS2MSS
+	Mapping registers: C674X_0 - MBX_MSS2DSS
+	Mapping registers: C674X_0 - MBX_DSS2RSS
+	Mapping registers: C674X_0 - MBX_RSS2DSS
+	Mapping registers: C674X_0 - Hidden
+	Building search data: C674X_0
+	Applying virtual groups: C674X_0 - TPCC0
+	Applying virtual groups: C674X_0 - TPCC1
+	Executing Startup Scripts: C674X_0
+	Initializing: CS_DAP_0
+	Mapping registers: CS_DAP_0 - Core Registers
+	Mapping registers: CS_DAP_0 - Hidden
+	Building search data: CS_DAP_0
+	Executing Startup Scripts: CS_DAP_0
+	Initializing: Cortex_R4_0
+	Mapping registers: Cortex_R4_0 - Core Registers
+	Mapping registers: Cortex_R4_0 - USER_Registers
+	Mapping registers: Cortex_R4_0 - FIQ_Registers
+	Mapping registers: Cortex_R4_0 - Supervisor_Registers
+	Mapping registers: Cortex_R4_0 - Abort_Registers
+	Mapping registers: Cortex_R4_0 - IRQ_Registers
+	Mapping registers: Cortex_R4_0 - Undefined_Registers
+	Mapping registers: Cortex_R4_0 - All_Banked_Registers
+	Mapping registers: Cortex_R4_0 - GIO
+	Mapping registers: Cortex_R4_0 - DMA1
+	Mapping registers: Cortex_R4_0 - DMA2
+	Mapping registers: Cortex_R4_0 - VIM
+	Mapping registers: Cortex_R4_0 - RTIA
+	Mapping registers: Cortex_R4_0 - RTIB
+	Mapping registers: Cortex_R4_0 - QSPI
+	Mapping registers: Cortex_R4_0 - MIBSPIA
+	Mapping registers: Cortex_R4_0 - MIBSPIB
+	Mapping registers: Cortex_R4_0 - SCIA
+	Mapping registers: Cortex_R4_0 - SCIB
+	Mapping registers: Cortex_R4_0 - I2C
+	Mapping registers: Cortex_R4_0 - TPTC0
+	Mapping registers: Cortex_R4_0 - TPTC1
+	Mapping registers: Cortex_R4_0 - TPTC2
+	Mapping registers: Cortex_R4_0 - TPTC3
+	Mapping registers: Cortex_R4_0 - TPCC0
+	Mapping registers: Cortex_R4_0 - TPCC1
+	Mapping registers: Cortex_R4_0 - CRC
+	Mapping registers: Cortex_R4_0 - DCCA
+	Mapping registers: Cortex_R4_0 - DCCB
+	Mapping registers: Cortex_R4_0 - ESM
+	Mapping registers: Cortex_R4_0 - MBX_DSS2MSS
+	Mapping registers: Cortex_R4_0 - MBX_MSS2DSS
+	Mapping registers: Cortex_R4_0 - MBX_MSS2RSS
+	Mapping registers: Cortex_R4_0 - MBX_RSS2MSS
+	Mapping registers: Cortex_R4_0 - Hidden
+	Building search data: Cortex_R4_0
+	Applying virtual groups: Cortex_R4_0 - DMA1
+	Applying virtual groups: Cortex_R4_0 - DMA2
+	Applying virtual groups: Cortex_R4_0 - TPCC0
+	Applying virtual groups: Cortex_R4_0 - TPCC1
+	Executing Startup Scripts: Cortex_R4_0
+	Initializing: ETM_0
+	Executing Startup Scripts: ETM_0
+	Initializing: CSETB_0
+	Mapping registers: CSETB_0 - Core Registers
+	Mapping registers: CSETB_0 - Hidden
+	Building search data: CSETB_0
+	Executing Startup Scripts: CSETB_0
+Connecting...
+Loading Images
+	Initialization of uniflash object completed
+	Initialization complete.: 1%
+info: Cortex_R4_0: Initialization complete.
+info: Cortex_R4_0: Flashing process starting...
+info: Cortex_R4_0: Connecting to COM Port /dev/awr16xx_cfg...
+info: Cortex_R4_0: Reset connection to device
+	Opening COM port /dev/awr16xx_cfg...: 1%
+info: Cortex_R4_0: Set break signal
+info: Cortex_R4_0: Connection to COM port succeeded. Flashing can proceed.
+	Connected to COM port.: 2%
+info: Cortex_R4_0: Reading device version info...
+info: Cortex_R4_0: ** 1 files specified for flashing.
+	Checking fileType appropriateness for this device...: 4%
+info: Cortex_R4_0: Checking file /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk/xwr16xx_mmw_demo_secure.bin for correct header for IWR1642.
+	Checking fileType appropriateness for this device...: 5%
+info: Cortex_R4_0: IWR1642 device, fileType=META_IMAGE1 detected -> OK
+	Format before download started ...: 6%
+info: Cortex_R4_0: !! Files are valid for IWR1642.
+info: Cortex_R4_0: Format on download was specified. Formatting SFLASH storage...
+info: Cortex_R4_0: -->Erasing storage [SFLASH]
+	Sending Erase command to device...: 7%
+info: Cortex_R4_0: -->Sending Erase command to device...
+	Sending Erase command to device...: 8%
+info: Cortex_R4_0: -->Erase storage completed successfully!
+	Format Complete!: 9%
+info: Cortex_R4_0: Downloading [META_IMAGE1] size [296644]
+	Downloading [META_IMAGE1] size [296644]...: 10%
+	Downloading [META_IMAGE1] size [296644]...: 11%
+	Downloading [META_IMAGE1] size [296644]...: 12%
+	Downloading [META_IMAGE1] size [296644]...: 13%
+	Downloading [META_IMAGE1] size [296644]...: 14%
+	Downloading [META_IMAGE1] size [296644]...: 15%
+	Downloading [META_IMAGE1] size [296644]...: 16%
+	Downloading [META_IMAGE1] size [296644]...: 17%
+	Downloading [META_IMAGE1] size [296644]...: 18%
+	Downloading [META_IMAGE1] size [296644]...: 19%
+	Downloading [META_IMAGE1] size [296644]...: 20%
+	Downloading [META_IMAGE1] size [296644]...: 21%
+	Downloading [META_IMAGE1] size [296644]...: 22%
+	Downloading [META_IMAGE1] size [296644]...: 23%
+	Downloading [META_IMAGE1] size [296644]...: 24%
+	Downloading [META_IMAGE1] size [296644]...: 25%
+	Downloading [META_IMAGE1] size [296644]...: 26%
+	Downloading [META_IMAGE1] size [296644]...: 27%
+	Downloading [META_IMAGE1] size [296644]...: 28%
+	Downloading [META_IMAGE1] size [296644]...: 29%
+	Downloading [META_IMAGE1] size [296644]...: 30%
+	Downloading [META_IMAGE1] size [296644]...: 31%
+	Downloading [META_IMAGE1] size [296644]...: 32%
+	Downloading [META_IMAGE1] size [296644]...: 33%
+	Downloading [META_IMAGE1] size [296644]...: 34%
+	Downloading [META_IMAGE1] size [296644]...: 35%
+	Downloading [META_IMAGE1] size [296644]...: 36%
+	Downloading [META_IMAGE1] size [296644]...: 37%
+	Downloading [META_IMAGE1] size [296644]...: 38%
+	Downloading [META_IMAGE1] size [296644]...: 39%
+	Downloading [META_IMAGE1] size [296644]...: 40%
+	Downloading [META_IMAGE1] size [296644]...: 41%
+	Downloading [META_IMAGE1] size [296644]...: 42%
+	Downloading [META_IMAGE1] size [296644]...: 43%
+	Downloading [META_IMAGE1] size [296644]...: 44%
+	Downloading [META_IMAGE1] size [296644]...: 45%
+	Downloading [META_IMAGE1] size [296644]...: 46%
+	Downloading [META_IMAGE1] size [296644]...: 47%
+	Downloading [META_IMAGE1] size [296644]...: 48%
+	Downloading [META_IMAGE1] size [296644]...: 49%
+	Downloading [META_IMAGE1] size [296644]...: 50%
+	Downloading [META_IMAGE1] size [296644]...: 51%
+	Downloading [META_IMAGE1] size [296644]...: 52%
+	Downloading [META_IMAGE1] size [296644]...: 53%
+	Downloading [META_IMAGE1] size [296644]...: 54%
+	Downloading [META_IMAGE1] size [296644]...: 55%
+	Downloading [META_IMAGE1] size [296644]...: 56%
+	Downloading [META_IMAGE1] size [296644]...: 57%
+	Downloading [META_IMAGE1] size [296644]...: 58%
+	Downloading [META_IMAGE1] size [296644]...: 59%
+	Downloading [META_IMAGE1] size [296644]...: 60%
+	Downloading [META_IMAGE1] size [296644]...: 61%
+	Downloading [META_IMAGE1] size [296644]...: 62%
+	Downloading [META_IMAGE1] size [296644]...: 63%
+	Downloading [META_IMAGE1] size [296644]...: 64%
+	Downloading [META_IMAGE1] size [296644]...: 65%
+	Downloading [META_IMAGE1] size [296644]...: 66%
+	Downloading [META_IMAGE1] size [296644]...: 67%
+	Downloading [META_IMAGE1] size [296644]...: 68%
+	Downloading [META_IMAGE1] size [296644]...: 69%
+	Downloading [META_IMAGE1] size [296644]...: 70%
+	Downloading [META_IMAGE1] size [296644]...: 71%
+	Downloading [META_IMAGE1] size [296644]...: 72%
+	Downloading [META_IMAGE1] size [296644]...: 73%
+	Downloading [META_IMAGE1] size [296644]...: 74%
+	Downloading [META_IMAGE1] size [296644]...: 75%
+	Downloading [META_IMAGE1] size [296644]...: 76%
+	Downloading [META_IMAGE1] size [296644]...: 77%
+	Downloading [META_IMAGE1] size [296644]...: 78%
+	Downloading [META_IMAGE1] size [296644]...: 79%
+	Downloading [META_IMAGE1] size [296644]...: 80%
+	Downloading [META_IMAGE1] size [296644]...: 81%
+	Downloading [META_IMAGE1] size [296644]...: 82%
+	Downloading [META_IMAGE1] size [296644]...: 83%
+	Downloading [META_IMAGE1] size [296644]...: 84%
+	Downloading [META_IMAGE1] size [296644]...: 85%
+	Downloading [META_IMAGE1] size [296644]...: 86%
+	Downloading [META_IMAGE1] size [296644]...: 87%
+	Downloading [META_IMAGE1] size [296644]...: 88%
+	Downloading [META_IMAGE1] size [296644]...: 89%
+	Downloading [META_IMAGE1] size [296644]...: 90%
+	Downloading [META_IMAGE1] size [296644]...: 91%
+	Downloading [META_IMAGE1] size [296644]...: 92%
+info: Cortex_R4_0: SUCCESS!! File type META_IMAGE1 downloaded successfully to SFLASH.
+	Disconnecting from device on COM port /dev/awr16xx_cfg ...: 93%
+info: Cortex_R4_0: Disconnecting from device on COM port /dev/awr16xx_cfg...
+	Instance shutdown procedure activated...: 99%
+info: Cortex_R4_0: Flashing instance clean-up initiated...
+	Done.: 100%
+info: Cortex_R4_0: Instance deinitialized!
+Running...
+Loading python script at: /home/a0216598/uniflash_linux_64/ccs_base/mmWave/FlashPython.py
+Success
+FLASH: Success
+
+eth008 Board details:
+IP address: 10.218.113.59
+Port: 17494
+
+connecting...
+Relay states 8->1 : 00010011
+1 off
+2 off
+Relay states 8->1 : 00010000
+1 on
+Relay states 8->1 : 00010001
+3 on
+Relay states 8->1 : 00010101
+3 off
+Relay states 8->1 : 00010001
+exit
+Disconnected
+Post-Script returned: Successshutting down py4j gw server.
+
+
+**************************************************
+Test case execution completed
+**************************************************
+
+**************************************************
+Testcase Result : PASS
+**************************************************

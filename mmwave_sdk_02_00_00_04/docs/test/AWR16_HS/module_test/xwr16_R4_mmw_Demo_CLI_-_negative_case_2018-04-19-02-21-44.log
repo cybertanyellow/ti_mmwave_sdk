@@ -1,0 +1,56 @@
+eth008 Board details:
+IP address: 10.218.113.59
+Port: 17494
+
+connecting...
+Relay states 8->1 : 00010001
+1 off
+2 off
+Relay states 8->1 : 00010000
+1 on
+Relay states 8->1 : 00010001
+3 on
+Relay states 8->1 : 00000101
+3 off
+Relay states 8->1 : 00100001
+exit
+Disconnected
+Pre-Script returned: Success
+**************************************************
+Copying test case files from the Build server
+**************************************************
+call to copy_testcase_files:
+From: http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/demo/xwr16xx/mmw/profiles 
+to: /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk
+
+Copying testcase binary file from http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/demo/xwr16xx/mmw/profiles/profile_2d.cfg to /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk using command: 
+wget -e robots=off --no-proxy -N -T 30 -t 2 -P /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk http://gtjenkins.itg.ti.com/nightly_builds/mmwave_sdk-rel2/67-2018-04-18_18-31-01/artifacts/test/mmwave_sdk/packages/ti/demo/xwr16xx/mmw/profiles/profile_2d.cfg
+**************************************************
+Executing Testcase:/home/a0216598/ti/mcpi_tf/mcpi_testframework_1_12_00_01/test/temp/mmWave_SDK___hs_awr16xx_sdk02.00.00_Test_Plan___jenkins-67_2018_04_18_19_04_56/profile_2d.cfg
+**************************************************
+Starting Capture Demo test script.
+
+usb/uart port = /dev/awr16xx_cfg
+
+Send <CR> for CLI prompt.
+
+This is a xwr16xx testcase. Request MSS handling of demo.
+
+Data Read2 = 
+
+did not get CLI prompt!
+
+
+Current working directory is /home/a0216598/ti/mcpi_tf/mmwave_sdk_test/mcpitf_scripts/mmwave_sdk
+line from config file: sensorStop
+
+Data2 Read from serial port = 
+
+Failed ACK.
+
+Test Case Category = Negative, so PASSed TC.
+
+
+**************************************************
+Testcase Result : PASS
+**************************************************
